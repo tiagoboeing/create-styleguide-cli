@@ -1,0 +1,42 @@
+{
+  "name": "@tiagoboeing/frontend-style-guide-cli",
+  "version": "1.0.0",
+  "description": "A CLI to automate style guide configs for frontend projects, this uses ESLint and Prettier.",
+  "main": "src/index.js",
+  "bin": {
+    "@tiagoboeing/config-styleguide": "bin/create-project",
+    "config-styleguide": "bin/create-project"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tiago Boeing",
+  "license": "MIT",
+  "keywords": [
+    "cli",
+    "style guide",
+    "frontend",
+    "ESLint",
+    "Prettier"
+  ],
+  "dependencies": {
+    "arg": "^4.1.3",
+    "chalk": "^4.1.0",
+    "esm": "^3.2.25",
+    "inquirer": "^7.3.3",
+    "listr": "^0.14.3",
+    "ncp": "^2.0.0",
+    "pkg-install": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}
