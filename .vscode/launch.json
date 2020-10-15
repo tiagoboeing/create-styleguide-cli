@@ -10,7 +10,7 @@
       "runtimeArgs": [
         "link"
       ],
-      "cwd": "${workspaceFolder}/test",
+      "cwd": "${workspaceFolder}",
       "runtimeExecutable": "npm",
       "skipFiles": [
         "<node_internals>/**"

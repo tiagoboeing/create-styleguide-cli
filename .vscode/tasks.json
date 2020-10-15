@@ -15,7 +15,13 @@
       "args": [
         "--project",
         "angular2"
-      ]
+      ],
+      "dependsOn": [
+        "Recreate test folder"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/test"
+      }
     }
   ]
 }
