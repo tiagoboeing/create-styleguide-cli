@@ -5,34 +5,31 @@ import ncp from 'ncp'
 import path from 'path'
 import { install, projectInstall } from 'pkg-install'
 import { promisify } from 'util'
+import { getProjectConfig } from './controllers/project-config'
 
 const access = promisify(fs.access)
 const copy = promisify(ncp)
 
 async function copyTemplateFiles (options) {
-  return copy(options.templateDirectory, options.targetDirectory, {
+  const templateDir = `${options.templateDirectory}/assets`
+  return copy(templateDir, options.targetDirectory, {
     clobber: false
   })
 }
 
-async function installDependencies (options) {
-  await install(
-    {
-      eslint: undefined,
-      'eslint-config-prettier': undefined,
-      'eslint-config-standard': undefined,
-      'eslint-plugin-import': undefined,
-      'eslint-plugin-node': undefined,
-      'eslint-plugin-prettier': undefined,
-      'eslint-plugin-promise': undefined,
-      'eslint-plugin-standard': undefined,
-      '@typescript-eslint/eslint-plugin': undefined,
-      '@typescript-eslint/parser': undefined
-    },
-    {
-      dev: true
+async function installDependencies (options, projectConfigs) {
+  const { devDependencies, dependencies } = projectConfigs
+
+  async function add (deps, dev = true) {
+    if (deps) {
+      await install(deps, {
+        dev
+      })
     }
-  )
+  }
+
+  await add(dependencies, false)
+  await add(devDependencies, true)
 
   await projectInstall({
     cwd: options.targetDirectory
@@ -49,13 +46,12 @@ export async function configureProject (options) {
   const templateDir = path.resolve(
     new URL(currentFileUrl).pathname,
     '../../templates',
-    options.project.toLowerCase(),
-    'assets'
+    options.project.toLowerCase()
   )
   options.templateDirectory = templateDir
 
   try {
-    await access(templateDir, fs.constants.R_OK)
+    await access(`${templateDir}`, fs.constants.R_OK)
   } catch (err) {
     console.error('%s Invalid template name', chalk.red.bold('ERROR'))
     process.exit(1)
@@ -63,8 +59,14 @@ export async function configureProject (options) {
 
   const tasks = new Listr([
     {
+      title: 'Read project config file',
+      task: ctx => {
+        ctx.projectConfigs = getProjectConfig(options)
+      }
+    },
+    {
       title: 'Install dependencies',
-      task: () => installDependencies(options)
+      task: ({ projectConfigs }) => installDependencies(options, projectConfigs)
     },
     {
       title: 'Copy template files',
