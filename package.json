@@ -1,5 +1,5 @@
 {
-  "name": "@tiagoboeing/frontend-style-guide-cli",
+  "name": "@tiagoboeing/styleguide-cli",
   "version": "1.0.0",
   "description": "A CLI to automate style guide configs for frontend projects, this uses ESLint and Prettier.",
   "main": "src/index.js",
