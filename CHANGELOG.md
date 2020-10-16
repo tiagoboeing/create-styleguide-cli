@@ -5,7 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v1.0.2-0](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.2-0...v1.0.2-0)
+## [v1.0.5-0](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.5-0...v1.0.5-0)
+
+## [v1.0.5-0](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.4-0...v1.0.5-0) - 2020-10-16
+
+### Commits
+
+- Change main command [`d7a18e6`](https://github.com/tiagoboeing/styleguide-cli/commit/d7a18e649b774befda962d9dd534c87a50fb707e)
+- Add pre-commit Husky hook [`d7a645a`](https://github.com/tiagoboeing/styleguide-cli/commit/d7a645a4891f50d5410de975fae697b5d28d1722)
+
+## [v1.0.4-0](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.3-0...v1.0.4-0) - 2020-10-16
+
+### Commits
+
+- Change URL strategy [`c9f9015`](https://github.com/tiagoboeing/styleguide-cli/commit/c9f9015898123eda50735c8f10920c0c726d8668)
+- Add Husky pre-push changelog [`0310ffe`](https://github.com/tiagoboeing/styleguide-cli/commit/0310ffeb452504eecdfe87836c0072da354d6b34)
+
+## [v1.0.3-0](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.2-0...v1.0.3-0) - 2020-10-16
+
+### Commits
+
+- Add new option to bin property on package.json [`2a6922d`](https://github.com/tiagoboeing/styleguide-cli/commit/2a6922d7e5466472b94b98019ee6a04bfaa99580)
 
 ## [v1.0.2-0](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.1-0...v1.0.2-0) - 2020-10-16
 
