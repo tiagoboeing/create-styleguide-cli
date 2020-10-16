@@ -26,6 +26,12 @@ $ npm init @tiagoboeing/styleguide
 
 $ npx @tiagoboeing/create-styleguide
 
+# or
+
+$ npm i -g @tiagoboeing/create-styleguide
+$ create-styleguide
+
+# after run, select a option and be happy! 🎉
 ? What the type of your project?
 ❯ JavaScript
   Angular 2+
