@@ -1,0 +1,10 @@
+node_modules
+
+.editorconfig
+.eslintrc.json
+.eslintignore
+.prettierrc
+
+test/
+docs/
+.vscode/
