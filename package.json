@@ -10,7 +10,7 @@
     "access": "public"
   },
   "scripts": {
-    "version": "auto-changelog -p --hide-credit && git add CHANGELOG.md"
+    "changelog": "auto-changelog -p --hide-credit && git add CHANGELOG.md"
   },
   "author": "Tiago Boeing",
   "license": "MIT",
@@ -37,7 +37,8 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.3.0"
   },
   "repository": {
     "type": "git",
@@ -47,5 +48,10 @@
     "template": "keepachangelog",
     "unreleased": true,
     "commitLimit": false
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run changelog && git add CHANGELOG.md"
+    }
   }
 }
