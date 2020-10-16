@@ -20,7 +20,7 @@ A CLI to add ESLint + Prettier and enforce a style guide based on `ESLint standa
 Run the command on root of your project. (Same folder of `package.json`)
 
 ```bash
-$ npx config-styleguide
+$ npx @tiagoboeing/create-styleguide
 
 ? What the type of your project?
 ❯ JavaScript
@@ -48,7 +48,7 @@ $ cd test
 $ npm init -y
 
 # and... run the CLI for apply magic 🚀
-$ config styleguide
+$ create-styleguide
 ```
 
 2. Using VSCode automated tasks (`tasks.json` and `launch.json`)
