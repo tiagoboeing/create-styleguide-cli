@@ -5,10 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v1.0.2-0](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.2-0...v1.0.2-0)
+## [v1.0.2](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.2...v1.0.2)
+
+## [v1.0.2](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.2-0...v1.0.2) - 2020-10-16
 
 ### Commits
 
+- Change Prettier printWidth from 80 to 100 [`3b50a08`](https://github.com/tiagoboeing/styleguide-cli/commit/3b50a0858e589090dd89c73f11617f7bf9ac45a2)
 - Changelog [`9c89abe`](https://github.com/tiagoboeing/styleguide-cli/commit/9c89abeac32c590ecaad550dbb85495ad6c1e7ae)
 
 ## [v1.0.2-0](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.1...v1.0.2-0) - 2020-10-16
