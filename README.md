@@ -20,6 +20,10 @@ A CLI to add ESLint + Prettier and enforce a style guide based on `ESLint standa
 Run the command on root of your project. (Same folder of `package.json`)
 
 ```bash
+$ npm init @tiagoboeing/styleguide
+
+# or
+
 $ npx @tiagoboeing/create-styleguide
 
 ? What the type of your project?
