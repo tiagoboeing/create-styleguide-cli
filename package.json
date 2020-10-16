@@ -4,6 +4,7 @@
   "description": "A CLI to automate style guide configs for frontend projects, this uses ESLint and Prettier.",
   "main": "src/index.js",
   "bin": {
+    "@tiagoboeing/config-styleguide": "bin/create-project",
     "config-styleguide": "bin/create-project"
   },
   "publishConfig": {

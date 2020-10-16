@@ -5,7 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v1.0.1-0](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.1-0...v1.0.1-0)
+## [v1.0.2-0](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.2-0...v1.0.2-0)
+
+## [v1.0.2-0](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.1-0...v1.0.2-0) - 2020-10-16
+
+### Commits
+
+- Add `husky` dependency to auto gererate changelog [`9ffc7c8`](https://github.com/tiagoboeing/styleguide-cli/commit/9ffc7c81a473c442985e4916c56f99afe1447b74)
+- Add `auto-changelog` dependency to project [`debb118`](https://github.com/tiagoboeing/styleguide-cli/commit/debb118a7d7a556a2ea150512705742188eafbb5)
+- Fixes: publish template files to NPM [`076a0bd`](https://github.com/tiagoboeing/styleguide-cli/commit/076a0bdb0dc2dfc7b9c75f9bb0738547a91f46a1)
 
 ## v1.0.1-0 - 2020-10-15
 
