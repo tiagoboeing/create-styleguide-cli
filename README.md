@@ -1,6 +1,8 @@
 # Style Guide CLI
 
-A CLI to add ESLint + Prettier and enforce a style guide based on `ESLint standard`. This automatize configs of Prettier and ESLint adding specific files for different frameworks/languages (in case of JS or TS).
+A CLI to add ESLint + Prettier and enforce a style guide based on `ESLint standard`. **This automatize dependencies install and Prettier + ESLint configs**, adding specific files for different frameworks/languages (in case of JS or TS).
+
+![Adding for JavaScript project](docs/screenshots/g3iwSRlU6a.gif)
 
 ## Support
 
@@ -11,7 +13,7 @@ A CLI to add ESLint + Prettier and enforce a style guide based on `ESLint standa
 | React / Next.js                           | ✅ Yes    |
 | TypeScript (use Angular template for now) | Roadmap  |
 
-> You can contribute sending a pull request
+> Contribute sending a pull request or can be a sponsor
 
 ## Use
 
@@ -63,4 +65,49 @@ On `.vscode/tasks.json` you can change the CLI args in:
 ],
 ```
 
+## Defaults
 
+> Same configs for all projects types
+
+<details>
+<summary>Prettier</summary>
+<p>
+
+```json
+{
+  "$schema": "http://json.schemastore.org/prettierrc",
+  "semi": false,
+  "singleQuote": true,
+  "arrowParens": "avoid",
+  "trailingComma": "none",
+  "endOfLine": "auto",
+  "tabWidth": 2,
+  "printWidth": 80
+}
+```
+</p>
+</details>
+
+<details>
+<summary>.editorconfig</summary>
+<p>
+
+```conf
+# Editor configuration, see https://editorconfig.org
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+charset = utf-8
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+max_line_length = off
+trim_trailing_whitespace = false
+
+```
+</p>
+</details>
