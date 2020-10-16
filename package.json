@@ -9,7 +9,9 @@
   "publishConfig": {
     "access": "public"
   },
-  "scripts": {},
+  "scripts": {
+    "version": "auto-changelog -p --hide-credit && git add CHANGELOG.md"
+  },
   "author": "Tiago Boeing",
   "license": "MIT",
   "keywords": [
@@ -29,6 +31,7 @@
     "pkg-install": "^1.0.0"
   },
   "devDependencies": {
+    "auto-changelog": "^2.2.1",
     "eslint": "^7.11.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.22.1",
@@ -39,5 +42,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/tiagoboeing/styleguide-cli.git"
+  },
+  "auto-changelog": {
+    "template": "keepachangelog",
+    "unreleased": true,
+    "commitLimit": false
   }
 }
