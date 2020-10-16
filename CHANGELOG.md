@@ -5,7 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v1.0.0](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.0...v1.0.0)
+## [v1.0.2-0](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.2-0...v1.0.2-0)
+
+## [v1.0.2-0](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.1...v1.0.2-0) - 2020-10-16
+
+### Commits
+
+- Add new GIF to README [`bc44c4e`](https://github.com/tiagoboeing/styleguide-cli/commit/bc44c4efcc4fe8abfd3e9c2d4ff9fdd230bdec51)
+
+## [v1.0.1](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.0...v1.0.1) - 2020-10-16
+
+### Commits
+
+- Changelog [`b450af4`](https://github.com/tiagoboeing/styleguide-cli/commit/b450af45c006a6e00fe094dde2fbe4fd0c0335ab)
+- Remove log from getProjectConfig method [`8c7a0c6`](https://github.com/tiagoboeing/styleguide-cli/commit/8c7a0c6479ef62272216af4c3c09cf051e569fca)
 
 ## v1.0.0 - 2020-10-16
 
