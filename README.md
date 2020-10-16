@@ -2,7 +2,7 @@
 
 A CLI to add ESLint + Prettier and enforce a style guide based on `ESLint standard`. **This automatize dependencies install and Prettier + ESLint configs**, adding specific files for different frameworks/languages (in case of JS or TS).
 
-![Adding for JavaScript project](docs/screenshots/g3iwSRlU6a.gif)
+![Adding for JavaScript project](docs/screenshots/3w4IQMsF4r.gif)
 
 ## Support
 
