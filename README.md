@@ -17,6 +17,13 @@ A CLI to add ESLint + Prettier and enforce a style guide based on `ESLint standa
 
 ## Use
 
+Before run, remove following files from your project root if exists:
+
+- `.editorconfig`
+- `.eslintignore`
+- `.eslintrc.json`
+- `.prettierrc`
+
 Run the command on root of your project. (Same folder of `package.json`)
 
 ```bash
@@ -92,7 +99,7 @@ On `.vscode/tasks.json` you can change the CLI args in:
   "trailingComma": "none",
   "endOfLine": "auto",
   "tabWidth": 2,
-  "printWidth": 80
+  "printWidth": 100
 }
 ```
 </p>
