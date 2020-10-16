@@ -40,6 +40,11 @@
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.3.0"
   },
+  "files": [
+    "bin/",
+    "src/",
+    "templates/"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/tiagoboeing/styleguide-cli.git"

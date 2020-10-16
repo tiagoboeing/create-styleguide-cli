@@ -42,9 +42,9 @@ export async function configureProject (options) {
     targetDirectory: options.targetDirectory || process.cwd()
   }
 
-  const currentFileUrl = import.meta.url
+  const currentFileUrl = new URL(import.meta.url).pathname
   const templateDir = path.resolve(
-    new URL(currentFileUrl).pathname,
+    currentFileUrl.substr(currentFileUrl.indexOf('/')),
     '../../templates',
     options.project.toLowerCase()
   )
