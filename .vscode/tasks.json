@@ -14,7 +14,7 @@
       "command": "config-styleguide",
       "args": [
         "--project",
-        "angular2"
+        "javascript"
       ],
       "dependsOn": [
         "Recreate test folder"

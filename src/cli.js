@@ -34,7 +34,11 @@ async function promptForMissingOptions (options) {
       type: 'list',
       name: 'project',
       message: 'What the type of your project?',
-      choices: [{ name: 'Angular 2+', value: 'angular2' }]
+      choices: [
+        { name: 'JavaScript', value: 'javascript' },
+        { name: 'Angular 2+', value: 'angular2' },
+        { name: 'React / Next.js (TypeScript)', value: 'react-next-ts' }
+      ]
     })
   }
 
