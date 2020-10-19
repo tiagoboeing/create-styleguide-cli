@@ -5,7 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v1.0.2](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.2...v1.0.2)
+## [v1.0.3](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.3...v1.0.3)
+
+## [v1.0.3](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.2...v1.0.3) - 2020-10-19
+
+### Commits
+
+- Create FUNDING.yml [`9cb9e91`](https://github.com/tiagoboeing/styleguide-cli/commit/9cb9e9148184e6c80528e602b24d39d215a182a3)
+- Fix: change `printWidth` from Prettier config to 95 [`816889c`](https://github.com/tiagoboeing/styleguide-cli/commit/816889c704b427e33109164e87994821897ba1a3)
+- changelog [`18fcebd`](https://github.com/tiagoboeing/styleguide-cli/commit/18fcebd89ef261a79b45606cef68d510dd849638)
+- Add badges for project README [`5df5739`](https://github.com/tiagoboeing/styleguide-cli/commit/5df573915009848e591c639caf8b1a3af5d87e6b)
 
 ## [v1.0.2](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.2-0...v1.0.2) - 2020-10-16
 
