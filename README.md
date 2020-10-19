@@ -101,7 +101,7 @@ On `.vscode/tasks.json` you can change the CLI args in:
   "trailingComma": "none",
   "endOfLine": "auto",
   "tabWidth": 2,
-  "printWidth": 100
+  "printWidth": 95
 }
 ```
 </p>

@@ -5,5 +5,5 @@ module.exports = {
   trailingComma: 'none',
   endOfLine: 'auto',
   tabWidth: 2,
-  printWidth: 100
+  printWidth: 95
 }
