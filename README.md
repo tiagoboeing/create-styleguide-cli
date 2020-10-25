@@ -1,6 +1,6 @@
 # Style Guide CLI
 
-![npm (scoped)](https://img.shields.io/npm/v/@tiagoboeing/create-styleguide?style=for-the-badge) ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/@tiagoboeing/create-styleguide?style=for-the-badge) ![NPM](https://img.shields.io/npm/l/@tiagoboeing/create-styleguide?style=for-the-badge)
+![npm (scoped)](https://img.shields.io/npm/v/@tiagoboeing/create-styleguide?style=for-the-badge) ![npm](https://img.shields.io/npm/dm/@tiagoboeing/create-styleguide?style=for-the-badge) ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/@tiagoboeing/create-styleguide?style=for-the-badge) ![NPM](https://img.shields.io/npm/l/@tiagoboeing/create-styleguide?style=for-the-badge)
 
 A CLI to add ESLint + Prettier and enforce a style guide based on `ESLint standard`. **This automatize dependencies install and Prettier + ESLint configs**, adding specific files for different frameworks/languages (in case of JS or TS).
 
