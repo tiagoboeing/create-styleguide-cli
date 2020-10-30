@@ -7,5 +7,6 @@ module.exports = {
     'eslint-plugin-node': '^11.1.0',
     'eslint-plugin-promise': '^4.2.1',
     'eslint-plugin-standard': '^4.0.1'
-  }
+  },
+  files: ['.editorconfig', '.eslintignore', '.eslintrc.json', 'prettier.config.js']
 }

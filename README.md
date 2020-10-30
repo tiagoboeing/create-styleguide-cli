@@ -19,7 +19,9 @@ A CLI to add ESLint + Prettier and enforce a style guide based on `ESLint standa
 
 ## Use
 
-Before run, remove following files from your project root if exists:
+Before run, backup following files from your project root if exists:
+
+> The CLI overwrite these files
 
 - `.editorconfig`
 - `.eslintignore`

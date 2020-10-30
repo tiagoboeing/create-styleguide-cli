@@ -5,6 +5,7 @@ import ncp from 'ncp'
 import path from 'path'
 import { install, projectInstall } from 'pkg-install'
 import { promisify } from 'util'
+import { verifyFilesExists } from './cli'
 import { getProjectConfig } from './controllers/project-config'
 
 const access = promisify(fs.access)
@@ -12,6 +13,7 @@ const copy = promisify(ncp)
 
 async function copyTemplateFiles (options) {
   const templateDir = `${options.templateDirectory}/assets`
+
   return copy(templateDir, options.targetDirectory, {
     clobber: false
   })
@@ -60,9 +62,14 @@ export async function configureProject (options) {
   const tasks = new Listr([
     {
       title: 'Read project config file',
-      task: ctx => {
-        ctx.projectConfigs = getProjectConfig(options)
-      }
+      task: ctx => (ctx.projectConfigs = getProjectConfig(options))
+    },
+    {
+      title: 'Verify config files exists',
+      task: async ctx => ({
+        ...ctx,
+        ...(await verifyFilesExists(options, ctx))
+      })
     },
     {
       title: 'Install dependencies',

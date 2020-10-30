@@ -11,5 +11,6 @@ module.exports = {
     'eslint-plugin-standard': undefined,
     '@typescript-eslint/eslint-plugin': undefined,
     '@typescript-eslint/parser': undefined
-  }
+  },
+  files: ['.editorconfig', '.eslintignore', '.eslintrc.json', 'prettier.config.js']
 }

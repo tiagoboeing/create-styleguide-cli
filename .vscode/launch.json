@@ -17,7 +17,7 @@
       ],
       "type": "pwa-node",
       "preLaunchTask": "Recreate test folder",
-      "postDebugTask": "Run program"
+      "postDebugTask": "Run program",
     }
   ]
 }

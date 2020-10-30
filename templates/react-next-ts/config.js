@@ -12,5 +12,6 @@ module.exports = {
     'eslint-plugin-promise': undefined,
     'eslint-plugin-react': undefined,
     'eslint-plugin-standard': undefined
-  }
+  },
+  files: ['.editorconfig', '.eslintignore', '.eslintrc.json', 'prettier.config.js']
 }
