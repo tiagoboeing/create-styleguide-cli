@@ -6,22 +6,23 @@
     {
       "label": "Recreate test folder",
       "type": "shell",
-      "command": "rm -rf test && mkdir test && cd test && npm init -y"
+      "command": "rm -rf test && mkdir test && cd test && npm init -y",
+      "dependsOn": "NPM link",
     },
     {
       "label": "Run program",
       "type": "shell",
-      "command": "config-styleguide",
+      "command": "create-styleguide",
       "args": [
         "--project",
-        "javascript"
+        "javascript",
       ],
       "dependsOn": [
         "Recreate test folder"
       ],
       "options": {
         "cwd": "${workspaceFolder}/test"
-      }
+      },
     }
   ]
 }

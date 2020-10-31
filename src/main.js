@@ -1,6 +1,6 @@
 import chalk from 'chalk'
 import fs from 'fs'
-import Listr from 'listr'
+import { Listr } from 'listr2'
 import ncp from 'ncp'
 import path from 'path'
 import { install, projectInstall } from 'pkg-install'
@@ -62,22 +62,33 @@ export async function configureProject (options) {
   const tasks = new Listr([
     {
       title: 'Read project config file',
-      task: ctx => (ctx.projectConfigs = getProjectConfig(options))
+      task: ctx => (ctx.projectConfigs = getProjectConfig(options)),
+      skip: ctx => ctx.skipPrompts
     },
     {
-      title: 'Verify config files exists',
-      task: async ctx => ({
-        ...ctx,
-        ...(await verifyFilesExists(options, ctx))
-      })
+      title: 'Verify existing config files',
+      task: async (ctx, task) => {
+        console.log(ctx)
+        await verifyFilesExists(options, ctx, task)
+      },
+      skip: ctx => ctx.skipPrompts
+    },
+    {
+      title: 'Verify existing config files',
+      task: (ctx, task) => {
+        console.log(ctx)
+      },
+      skip: ctx => ctx.skipPrompts
     },
     {
       title: 'Install dependencies',
-      task: ({ projectConfigs }) => installDependencies(options, projectConfigs)
+      task: ({ projectConfigs }) => installDependencies(options, projectConfigs),
+      skip: ctx => ctx.skipPrompts
     },
     {
       title: 'Copy template files',
-      task: () => copyTemplateFiles(options)
+      task: () => copyTemplateFiles(options),
+      skip: ctx => ctx.skipPrompts
     }
   ])
 

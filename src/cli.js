@@ -28,7 +28,7 @@ function parseArgumentsIntoOptions (rawArgs) {
  * @param {*} ctx context from Listr
  * @returns {Promise<{exists: Boolean, conflictedFiles: Array}>}
  */
-export async function verifyFilesExists (_options, ctx) {
+export async function verifyFilesExists (options, ctx, task) {
   const { files } = ctx.projectConfigs
   const props = {
     exists: false,
@@ -43,13 +43,13 @@ export async function verifyFilesExists (_options, ctx) {
     props.conflictedFiles.push(files[index])
   }
 
-  const prompts = []
+  let prompts
   console.log('props', props)
   if (props.exists) {
-    prompts.push({
+    prompts = {
+      type: 'confirm',
       name: 'overwrite',
-      type: 'list',
-      prefix: 'Project have config files, overwrite?',
+      initial: 'Project have config files, overwrite?',
       message: `Conflicted files: ${props.conflictedFiles.join(', ')}`,
       choices: [
         {
@@ -60,15 +60,15 @@ export async function verifyFilesExists (_options, ctx) {
           name: 'Not overwrite',
           value: false
         }
-      ],
-      default: true
-    })
+      ]
+    }
   }
 
-  const answers = await inquirer.prompt(prompts)
+  const answers = await task.prompt(prompts)
 
   return {
-    overwrite: answers.overwrite || true
+    ...options,
+    overwrite: answers && answers.overwrite ? answers.overwrite : true
   }
 }
 
@@ -78,8 +78,7 @@ async function promptForMissingOptions (options) {
   if (options.skipPrompts) {
     return {
       ...options,
-      template: options.project || defaultProject,
-      overwrite: options.overwrite || true
+      template: options.project || defaultProject
     }
   }
 
