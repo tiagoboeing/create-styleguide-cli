@@ -67,9 +67,30 @@ export async function configureProject (options) {
     },
     {
       title: 'Verify existing config files',
-      task: async (ctx, task) => {
+      task: (ctx, task) => {
+        ctx = verifyFilesExists(options, ctx)
         console.log(ctx)
-        await verifyFilesExists(options, ctx, task)
+
+        if (!ctx.exists) {
+          return ctx
+        }
+
+        return task.prompt({
+          type: 'confirm',
+          name: 'overwrite',
+          initial: 'Project have config files, overwrite?',
+          message: `Conflicted files: ${ctx.conflictedFiles.join(', ')}`,
+          choices: [
+            {
+              name: 'Overwrite my files (recommended)',
+              value: true
+            },
+            {
+              name: 'Not overwrite',
+              value: false
+            }
+          ]
+        })
       },
       skip: ctx => ctx.skipPrompts
     },

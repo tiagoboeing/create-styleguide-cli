@@ -28,7 +28,7 @@ function parseArgumentsIntoOptions (rawArgs) {
  * @param {*} ctx context from Listr
  * @returns {Promise<{exists: Boolean, conflictedFiles: Array}>}
  */
-export async function verifyFilesExists (options, ctx, task) {
+export function verifyFilesExists (options, ctx) {
   const { files } = ctx.projectConfigs
   const props = {
     exists: false,
@@ -43,32 +43,9 @@ export async function verifyFilesExists (options, ctx, task) {
     props.conflictedFiles.push(files[index])
   }
 
-  let prompts
-  console.log('props', props)
-  if (props.exists) {
-    prompts = {
-      type: 'confirm',
-      name: 'overwrite',
-      initial: 'Project have config files, overwrite?',
-      message: `Conflicted files: ${props.conflictedFiles.join(', ')}`,
-      choices: [
-        {
-          name: 'Overwrite my files (recommended)',
-          value: true
-        },
-        {
-          name: 'Not overwrite',
-          value: false
-        }
-      ]
-    }
-  }
-
-  const answers = await task.prompt(prompts)
-
   return {
     ...options,
-    overwrite: answers && answers.overwrite ? answers.overwrite : true
+    ...props
   }
 }
 
