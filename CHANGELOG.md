@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [v1.0.3](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.3...v1.0.3)
 
+### Commits
+
+- Changelog from v1.0.3 [`5d30655`](https://github.com/tiagoboeing/styleguide-cli/commit/5d3065507cbc91e232a848431d6690c2cad08434)
+- Add downloads badge to README [`f015bb4`](https://github.com/tiagoboeing/styleguide-cli/commit/f015bb4968c39b251c0029c8216429497df63491)
+
 ## [v1.0.3](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.2...v1.0.3) - 2020-10-19
 
 ### Commits

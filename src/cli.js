@@ -20,7 +20,7 @@ function parseArgumentsIntoOptions (rawArgs) {
 }
 
 async function promptForMissingOptions (options) {
-  const defaultProject = 'Angular 2+'
+  const defaultProject = 'angular2'
   if (options.skipPrompts) {
     return {
       ...options,
@@ -43,9 +43,10 @@ async function promptForMissingOptions (options) {
   }
 
   const answers = await inquirer.prompt(questions)
+
   return {
     ...options,
-    project: options.project || answers.project
+    project: answers.project || options.project
   }
 }
 

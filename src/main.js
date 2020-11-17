@@ -7,6 +7,8 @@ import { install, projectInstall } from 'pkg-install'
 import { promisify } from 'util'
 import { getProjectConfig } from './controllers/project-config'
 
+import { fileURLToPath } from 'url'
+
 const access = promisify(fs.access)
 const copy = promisify(ncp)
 
@@ -42,12 +44,23 @@ export async function configureProject (options) {
     targetDirectory: options.targetDirectory || process.cwd()
   }
 
-  const currentFileUrl = new URL(import.meta.url).pathname
+  console.log('dirname', __dirname)
+
+  const currentFileUrl = __dirname
+
+  // console.log('meta url', import.meta.url)
+  console.log('currentFileUrl', currentFileUrl)
+  // console.log('cwd', process.cwd())
+  // console.log('path resolve', path.resolve(currentFileUrl, '../../'))
+
   const templateDir = path.resolve(
-    currentFileUrl.substr(currentFileUrl.indexOf('/')),
-    '../../templates',
+    currentFileUrl,
+    '../templates',
     options.project.toLowerCase()
   )
+
+  console.log('templateDir', templateDir)
+
   options.templateDirectory = templateDir
 
   try {
