@@ -10,6 +10,8 @@
     "access": "public"
   },
   "scripts": {
+    "preversion": "npm run changelog",
+    "postversion": "git add . && git push && git push --tags",
     "changelog": "auto-changelog -p --hide-credit && git add CHANGELOG.md"
   },
   "author": "Tiago Boeing",
