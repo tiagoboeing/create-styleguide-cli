@@ -6,7 +6,7 @@ A CLI to add ESLint + Prettier and enforce a style guide based on `ESLint standa
 
 ![Adding for JavaScript project](docs/screenshots/3w4IQMsF4r.gif)
 
-## Support
+## Framework/language support
 
 | Framework / Language                      | Support? |
 | ----------------------------------------- | -------- |
@@ -16,6 +16,16 @@ A CLI to add ESLint + Prettier and enforce a style guide based on `ESLint standa
 | TypeScript (use Angular template for now) | Roadmap  |
 
 > Contribute sending a pull request or can be a sponsor
+
+## SO support
+
+| SO      | Support?   |
+| ------- | ---------- |
+| Linux   | ✅ Yes      |
+| Windows | ✅ Yes      |
+| MacOS   | Not tested |
+
+> You can edit this README if test on MacOS. 😁
 
 ## Use
 

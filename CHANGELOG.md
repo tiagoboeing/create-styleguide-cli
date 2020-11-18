@@ -5,7 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v1.0.3](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.3...v1.0.3)
+## [v1.0.4-fix.0](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.4-fix.0...v1.0.4-fix.0)
+
+## [v1.0.4-fix.0](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.3...v1.0.4-fix.0) - 2020-11-17
+
+### Commits
+
+- Change new URL to __dirname [`7792bf7`](https://github.com/tiagoboeing/styleguide-cli/commit/7792bf742bde9db176a62069ba8195267b53591c)
+- Changelog from v1.0.3 [`5d30655`](https://github.com/tiagoboeing/styleguide-cli/commit/5d3065507cbc91e232a848431d6690c2cad08434)
+- Add changelog generate command to preversion [`986bdaa`](https://github.com/tiagoboeing/styleguide-cli/commit/986bdaace4a946c576ec3fc14d13053999203c4e)
+- Add downloads badge to README [`f015bb4`](https://github.com/tiagoboeing/styleguide-cli/commit/f015bb4968c39b251c0029c8216429497df63491)
 
 ## [v1.0.3](https://github.com/tiagoboeing/styleguide-cli/compare/v1.0.2...v1.0.3) - 2020-10-19
 
