@@ -10,9 +10,9 @@ A CLI to add ESLint + Prettier and enforce a style guide based on `ESLint standa
 
 | Framework / Language                      | Support? |
 | ----------------------------------------- | -------- |
-| Angular 2+                                | ✅ Yes    |
-| JavaScript (Browser + Node)               | ✅ Yes    |
-| React / Next.js                           | ✅ Yes    |
+| Angular 2+                                | ✅ Yes   |
+| JavaScript (Browser + Node)               | ✅ Yes   |
+| React / Next.js (Typescript)              | ✅ Yes   |
 | TypeScript (use Angular template for now) | Roadmap  |
 
 > Contribute sending a pull request or can be a sponsor
